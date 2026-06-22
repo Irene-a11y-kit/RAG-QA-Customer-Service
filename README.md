@@ -10,7 +10,7 @@ A RAG-based intelligent Q&A system for customer service scenarios, built with La
 
 - 基于用户问题，从向量数据库中检索相关文档片段
 - 调用 DeepSeek 大模型生成自然语言回答
-- 支持上下文记忆的多轮对话（基础版）
+- 支持多格式文档导入（TXT、PDF 等）
 - 输出包含用户意图、情感标签和优先级建议
 
 ## 🛠️ 技术栈
@@ -37,3 +37,26 @@ pip install -r requirements.txt
 
 # 4. 启动服务
 python app.py
+```
+
+## 📁 项目结构
+
+```
+├── app.py              # FastAPI 主程序
+├── requirements.txt    # 项目依赖
+├── .env.example        # 环境变量示例
+├── knowledge_base/     # 知识库文件存放目录（需自行添加）
+└── README.md
+```
+
+## 📌 项目状态
+
+当前为 POC 阶段，核心功能已跑通，后续计划：
+- 优化 Prompt 模板，提升回答准确性
+- 增加对话上下文长度支持
+- 接入更多文档格式（Word、Markdown）
+- 添加简单的前端交互界面
+
+## 📄 License
+
+MIT License
